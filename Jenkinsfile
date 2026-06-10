@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout code') {
             steps {
-                git ''
+                git 'https://github.com/Hemanth42004/Apache_httpd-server-deployment-using-Ansible-and-Jenkins'
             }
         } 
         stage('Playbook is running') {
