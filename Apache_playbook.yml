@@ -1,0 +1,22 @@
+---
+- name: Installing Apache and deploying a sample page
+  hosts: local
+  become: yes
+  tasks:
+    - name: Installing Apache
+      dnf:
+        name: httpd
+        state: present
+
+    - name: Start the service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copying html file
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Project - Apache Deployment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .status {
+            font-size: 1.2em;
+            color: green;
+            font-weight: bold;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 DevOps Project</h1>
+    <p>Apache Web Server Deployment via Ansible & Jenkins</p>
+</header>
+
+<main>
+    <div class="card">
+        <h2>Welcome to the Deployed Apache Server</h2>
+        <p>This page is served by Apache, deployed automatically using:</p>
+        <ul style="text-align:left; display:inline-block;">
+            <li>✅ <strong>Ansible</strong> for provisioning</li>
+            <li>✅ <strong>Jenkins</strong> for CI/CD automation</li>
+            <li>✅ <strong>Apache HTTP Server</strong> for hosting</li>
+        </ul>
+        <p class="status">Deployment Successful!</p>
+        <p>Last updated: <span id="datetime"></span></p>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 DevOps Demo | Automated Deployment Pipeline
+</footer>
+
+<script>
+    // Display current date and time
+    document.getElementById("datetime").textContent = new Date().toLocaleString();
+</script>
+
+</body>
+</html>
