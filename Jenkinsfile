@@ -1,17 +1,30 @@
 pipeline {
     agent any
+
     stages {
-        stage('checkout code') {
+
+        stage('Checkout Code') {
             steps {
                 git 'https://github.com/Hemanth42004/Apache_httpd-server-deployment-using-Ansible-and-Jenkins'
             }
-        } 
-        stage('Playbook is running') {
+        }
+
+        stage('Run Ansible Playbook') {
             steps {
-                sh'ansible-playbook -i inventory.ini Apache_playbook.yml'
+                sh '''
+                ansible-playbook -i inventory.ini Apache_playbook.yml
+                '''
             }
         }
     }
+
+    post {
+        success {
+            echo 'Deployment Successful 🚀 Apache is running'
+        }
+
+        failure {
+            echo 'Deployment Failed ❌ Check logs'
+        }
+    }
 }
-
-
